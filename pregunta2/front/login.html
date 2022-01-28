@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+        <label>Usuario</label>
+        <input type="text" id="usuario" >
+        <label>Contraseña</label>
+        <input type="text" id="contrasena">
+        <button value="POST" onclick="llamadaLogin('http://localhost:8080/login')">POST</button>
+        <div id="respuesta"></div>
+        <input id="inv"  hidden="true">
+        <div id="rol"></div>
+        <div id="usuario"></div>
+        <div>
+            <label>id</label>
+            <input type="text" id="id" >
+            <label>titulo</label>
+            <input type="text" id="titulo" >
+            <label>autor</label>
+            <input type="text" id="autor" >
+            <label>año publicacion</label>
+            <input type="text" id="anopublicacion" >
+            <label>univco</label>
+            <input type="text" id="univco" >
+            
+        </div>
+        <div>
+            <button value="POST" onclick="llamadaAgregar('http://localhost:8080/api/agregar')">Agregar Tarea</button>
+            <button value="GET" onclick="llamadaObtener('http://localhost:8080/public/obtener')">Mostrar Tareas</button>
+            <button value="POST" type="button" onclick="llamadaEliminar('http://localhost:8080/api/eliminar')">Eliminar Tarea</button>
+        </div>
+        <div id="tareas"></div>
+    <script src="operaciones.js"></script>
+</body>
+</html>
